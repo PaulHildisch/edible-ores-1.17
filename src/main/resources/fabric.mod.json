@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "ores",
+  "version": "${version}",
+
+  "name": "Edible Ores",
+  "description": "This Year with an actual concept for the mod ^^",
+  "authors": [
+    "paulfuenftausend",
+    "Stackoverflow (probably)"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.paulfuenftausend.edibleOres.ExampleMod"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
