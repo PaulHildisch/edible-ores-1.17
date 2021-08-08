@@ -20,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.paulfuenftausend.edibleOres.ExampleMod"
+      "net.paulfuenftausend.edibleOres.EdibleOres"
     ]
   },
   "mixins": [
