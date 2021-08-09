@@ -9,8 +9,10 @@ import net.paulfuenftausend.edibleOres.EdibleOres;
 public class ModItems {
 
     public static final Item CANDYCANE = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item BUTTER = new Item(new Item.Settings().group(ItemGroup.MISC).maxCount(6));
 
     public static void registerItems(){
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "candycane"), CANDYCANE);
+        Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "butter"), BUTTER);
     }
 }
