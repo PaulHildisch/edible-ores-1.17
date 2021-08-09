@@ -21,3 +21,8 @@
 
 - edit fabric.mod.json with your information
 
+## Useful Links
+
+- Crafting json generator (https://crafting.thedestruc7i0n.ca/)
+- Loot Table generator (https://misode.github.io/loot-table/)
+- Loot Table infos (https://minecraft.fandom.com/wiki/Loot_table)

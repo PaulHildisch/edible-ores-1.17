@@ -1,5 +1,11 @@
 {
   "item.ores.candycane": "Candycane",
   "item.ores.butter": "Butter",
-  "block.ores.candy_ore": "Candy Ore"
+  "item.ores.popcorn": "Popcorn",
+  "item.ores.corn": "Corn",
+  "item.ores.butter_popcorn": "Buttered Popcorn - Delicious ;)",
+
+  "block.ores.candy_ore": "Candy Ore",
+
+  "itemGroup.ores.item_group": "Edible Ores"
 }
