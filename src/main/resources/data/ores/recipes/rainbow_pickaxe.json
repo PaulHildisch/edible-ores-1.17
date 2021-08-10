@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ccc",
+    " s ",
+    " s "
+  ],
+  "key":
+  {
+    "c":
+    {
+      "item": "ores:rainbow_shard"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "ores:rainbow_pickaxe",
+    "count": 1
+  }
+}

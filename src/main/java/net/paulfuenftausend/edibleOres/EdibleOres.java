@@ -11,7 +11,7 @@ import net.paulfuenftausend.edibleOres.registry.ModItems;
 public class EdibleOres implements ModInitializer {
 
 	public static final String MOD_ID =  "ores";
-	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "item_group"), () -> new ItemStack(ModItems.getCANDYCANE()));
+	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "item_group"), () -> new ItemStack(ModItems.getCandyCane()));
 
 	@Override
 	public void onInitialize() {

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ores:sugar_stick"
+  },
+  "result": "ores:cotton_candy",
+  "experience": 0.3,
+  "cookingtime": 160
+}
