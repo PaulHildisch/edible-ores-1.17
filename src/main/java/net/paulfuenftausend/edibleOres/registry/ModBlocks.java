@@ -24,8 +24,17 @@ public class ModBlocks {
             .requiresTool()
             .sounds(BlockSoundGroup.STONE));
 
+    private static final Block RAINBOW = new Block(FabricBlockSettings
+            .of(Material.WOOL)
+            .strength(2.5f, 0.3f)
+            .luminance(5)
+            .sounds(BlockSoundGroup.WOOL));
+
     public static void registerBlocks(){
         Registry.register(Registry.BLOCK, new Identifier(EdibleOres.MOD_ID, "candy_ore"), CANDY_ORE);
+        Registry.register(Registry.BLOCK, new Identifier(EdibleOres.MOD_ID, "rainbow"), RAINBOW);
+
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "candy_ore"), new BlockItem(CANDY_ORE, new Item.Settings().group(EdibleOres.ITEM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow"), new BlockItem(RAINBOW, new Item.Settings().group(EdibleOres.ITEM_GROUP)));
     }
 }
