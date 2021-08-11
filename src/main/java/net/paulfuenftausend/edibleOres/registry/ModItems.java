@@ -22,6 +22,9 @@ public class ModItems {
     public static Item getRainbowShard() {
         return RAINBOW_SHARD;
     }
+    public static Item getBUTTER() {
+        return BUTTER;
+    }
 
     private static final Item CANDYCANE = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP));
     private static final Item BUTTER = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).maxCount(6));

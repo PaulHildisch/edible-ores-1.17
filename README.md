@@ -23,6 +23,8 @@
 
 ## Useful Links
 
+recipes
+
 - Crafting json generator (https://crafting.thedestruc7i0n.ca/)
 - Loot Table generator (https://misode.github.io/loot-table/)
 - Loot Table generator 2 (https://minecraft.tools/en/loots.php)
