@@ -1,8 +1,10 @@
 package net.paulfuenftausend.edibleOres.registry;
 
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -35,6 +37,12 @@ public class ModItems {
     private static final Item COTTON_CANDY = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.5f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, (int)(30*20)),0.5f).build()));
     private static final Item SUGAR_STICK = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP));
 
+    //Armor
+    private static final Item RAINBOW_HELMET = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.HEAD ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_CHESTPLATE = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.CHEST ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_LEGGINGS = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.LEGS ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_BOOTS = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.FEET ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
+
     public static void registerItems(){
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "candycane"), CANDYCANE);
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "butter"), BUTTER);
@@ -44,6 +52,13 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow_shard"), RAINBOW_SHARD);
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "cotton_candy"), COTTON_CANDY);
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "sugar_stick"), SUGAR_STICK);
+
+
+        //Armor
+        Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow_helmet"), RAINBOW_HELMET);
+        Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow_chestplate"), RAINBOW_CHESTPLATE);
+        Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow_leggings"), RAINBOW_LEGGINGS);
+        Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow_boots"), RAINBOW_BOOTS);
 
         //Tools
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow_pickaxe"), new PickaxeBase(new ToolMaterialRainbow()));

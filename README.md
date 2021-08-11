@@ -23,13 +23,11 @@
 
 ## Useful Links
 
-recipes
-
 - Crafting json generator (https://crafting.thedestruc7i0n.ca/)
 - Loot Table generator (https://misode.github.io/loot-table/)
 - Loot Table generator 2 (https://minecraft.tools/en/loots.php)
 - Loot Table infos (https://minecraft.fandom.com/wiki/Loot_table)
 
+- Fabric Wiki (https://fabricmc.net/wiki/tutorial:introduction)
+- Minecraft Wiki (https://minecraft.fandom.com/de/wiki/Minecraft_Wiki)
 
-loot_tables
-recipes
