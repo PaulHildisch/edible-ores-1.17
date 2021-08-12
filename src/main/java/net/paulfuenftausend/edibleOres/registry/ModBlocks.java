@@ -5,10 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -29,6 +26,7 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.HeightProvider;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 import net.paulfuenftausend.edibleOres.Blocks.CandyOre;
+import net.paulfuenftausend.edibleOres.Blocks.CornPlantBlock;
 import net.paulfuenftausend.edibleOres.EdibleOres;
 
 public class ModBlocks {
@@ -47,6 +45,16 @@ public class ModBlocks {
             .luminance(5)
             .sounds(BlockSoundGroup.WOOL));
 
+
+
+    private static final CropBlock CORN_PLANT = new CornPlantBlock(AbstractBlock.Settings
+            .of(Material.PLANT)
+            .nonOpaque()
+            .breakInstantly()
+            .ticksRandomly()
+            .noCollision()
+            .sounds(BlockSoundGroup.CROP));
+
     private static final ConfiguredFeature<?,?> CANDY_ORE_OVERWORLD = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -59,6 +67,7 @@ public class ModBlocks {
     public static void registerBlocks(){
         Registry.register(Registry.BLOCK, new Identifier(EdibleOres.MOD_ID, "candy_ore"), CANDY_ORE);
         Registry.register(Registry.BLOCK, new Identifier(EdibleOres.MOD_ID, "rainbow"), RAINBOW);
+        Registry.register(Registry.BLOCK, new Identifier(EdibleOres.MOD_ID, "corn_plant"), CORN_PLANT);
 
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "candy_ore"), new BlockItem(CANDY_ORE, new Item.Settings().group(EdibleOres.ITEM_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "rainbow"), new BlockItem(RAINBOW, new Item.Settings().group(EdibleOres.ITEM_GROUP)));
@@ -67,5 +76,9 @@ public class ModBlocks {
         RegistryKey<ConfiguredFeature<?,?>> candy_ore_overworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(EdibleOres.MOD_ID, "candy_ore_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, candy_ore_overworld.getValue(), CANDY_ORE_OVERWORLD);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, candy_ore_overworld);
+    }
+
+    public static CropBlock getCornPlant() {
+        return CORN_PLANT;
     }
 }

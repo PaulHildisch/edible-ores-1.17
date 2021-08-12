@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "ores:blocks/corn_plant_stage2"
+  }
+}

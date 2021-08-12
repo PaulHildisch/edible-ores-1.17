@@ -30,4 +30,5 @@
 
 - Fabric Wiki (https://fabricmc.net/wiki/tutorial:introduction)
 - Minecraft Wiki (https://minecraft.fandom.com/de/wiki/Minecraft_Wiki)
+- Youtube Playlist (https://www.youtube.com/playlist?list=PLbOPi5L7V78LUzaRqm5KJ0GQFr1XGvc3d)
 
