@@ -12,7 +12,7 @@ import net.paulfuenftausend.edibleOres.registry.ModItems;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    RAINBOW("rainbow", 25, new int[]{3,8,6,3}, 40, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, 3, 1, Ingredient.ofItems(ModItems.getRainbowShard()));
+    RAINBOW("rainbow", 25, new int[]{3,6,8,3}, 40, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, 3, 1, Ingredient.ofItems(ModItems.getRainbowShard()));
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final String name;

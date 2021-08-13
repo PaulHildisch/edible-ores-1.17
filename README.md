@@ -21,6 +21,13 @@
 
 - edit fabric.mod.json with your information
 
+## Export mod
+- Click on gradle (the elephant)
+- goto Tasks -> build
+- execute jar (double click)
+- the .jar mod file is in build -> libs
+- just copy the .jar to your .minecraft/mod folder :)
+
 ## Useful Links
 
 - Crafting json generator (https://crafting.thedestruc7i0n.ca/)

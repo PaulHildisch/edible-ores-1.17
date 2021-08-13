@@ -10,6 +10,7 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.paulfuenftausend.edibleOres.EdibleOres;
 import net.paulfuenftausend.edibleOres.baseClasses.*;
+import org.lwjgl.system.CallbackI;
 
 import java.math.BigInteger;
 
@@ -35,15 +36,25 @@ public class ModItems {
     private static final Item POPCORN = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(8f).build()));
     private static final Item BUTTER_POPCORN = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).rarity(Rarity.RARE).food(new FoodComponent.Builder().hunger(10).saturationModifier(14f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 5*20), 1f).build()));
     private static final Item RAINBOW_SHARD = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(3.8f).snack().statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, (int)(1.5*20)), 0.8f).build()));
-    private static final Item COTTON_CANDY = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.5f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, (int)(30*20)),0.5f).build()));
+    //private static final Item COTTON_CANDY = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(4.5f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, (int)(30*20)),0.5f).build()));
+
+    private static final Item COTTON_CANDY = new Item(new Item.Settings()
+            .group(EdibleOres.ITEM_GROUP)
+            .food(new FoodComponent.Builder()
+                    .hunger(3)
+                    .saturationModifier(4.5f)
+                    .alwaysEdible()
+                    .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 10*20, Integer.MAX_VALUE), 0.1f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 10*20, 3), 0.9f)
+                    .build()));
     private static final Item SUGAR_STICK = new Item(new Item.Settings().group(EdibleOres.ITEM_GROUP));
     private static final Item CORN_SEEDS = new AliasedBlockItem(ModBlocks.getCornPlant(), new Item.Settings().group(EdibleOres.ITEM_GROUP));
 
     //Armor
-    private static final Item RAINBOW_HELMET = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.HEAD ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
-    private static final Item RAINBOW_CHESTPLATE = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.CHEST ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
-    private static final Item RAINBOW_LEGGINGS = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.LEGS ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
-    private static final Item RAINBOW_BOOTS = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.FEET ,new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_HELMET = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.HEAD, new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_CHESTPLATE = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.CHEST, new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_LEGGINGS = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.LEGS, new Item.Settings().group(EdibleOres.ITEM_GROUP));
+    private static final Item RAINBOW_BOOTS = new ArmorItem(ModArmorMaterials.RAINBOW, EquipmentSlot.FEET, new Item.Settings().group(EdibleOres.ITEM_GROUP));
 
     public static void registerItems(){
         Registry.register(Registry.ITEM, new Identifier(EdibleOres.MOD_ID, "candycane"), CANDYCANE);

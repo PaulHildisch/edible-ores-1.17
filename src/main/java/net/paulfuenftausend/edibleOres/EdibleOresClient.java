@@ -7,9 +7,9 @@ import net.paulfuenftausend.edibleOres.registry.ModBlocks;
 
 public class EdibleOresClient implements ClientModInitializer {
 
+
     @Override
     public void onInitializeClient() {
-        System.out.println("Client load");
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.getCornPlant());
     }
 }

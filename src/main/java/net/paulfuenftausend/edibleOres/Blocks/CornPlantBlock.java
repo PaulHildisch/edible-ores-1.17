@@ -12,6 +12,8 @@ import net.paulfuenftausend.edibleOres.registry.ModBlocks;
 import net.paulfuenftausend.edibleOres.registry.ModItems;
 
 public class CornPlantBlock extends CropBlock {
+
+    //https://pastebin.com/LmvvKkAA
     //Hitboxes for growth stages 0-7
     private final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{
             Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
